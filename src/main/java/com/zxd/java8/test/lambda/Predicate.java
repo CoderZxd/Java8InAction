@@ -29,5 +29,10 @@ class Test{
 	public static void main(String[] args) {
 		List<Integer> result = filter(Arrays.asList(1,2,3,4,5,6),(Integer i) -> i % 2 == 0);
 		System.out.println(result);
+		List<Integer> test = Arrays.asList(7,8,9,1,2,3,4,5,6);
+		test.sort((Integer o1,Integer o2) -> o1.compareTo(o2));
+		System.out.println(test);
+		Thread t = new Thread(()-> System.out.println("Hello world"));
+		t.start();
 	}
 }
