@@ -3,6 +3,8 @@ package com.zxd.java8.test.lambda;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.function.Consumer;
+import java.util.function.Function;
 
 /**
  * @Title: Predicate
@@ -26,6 +28,30 @@ class Test{
 		return result;
 	}
 
+	public static <T> List<T> predicate(List<T> list,Predicate<T> predicate){
+		List<T> result = new ArrayList<>();
+		for(T e:list){
+			if(predicate.test(e)){
+				result.add(e);
+			}
+		}
+		return result;
+	}
+
+	public static <T,R> List<R> map(List<T> list, Function<T,R> function){
+		List<R> result = new ArrayList<>();
+		for(T e:list){
+			result.add(function.apply(e));
+		}
+		return result;
+	}
+
+	public static <T> void forEach(List<T> list, Consumer<T> consumer){
+		for(T e:list){
+			consumer.accept(e);
+		}
+	}
+
 	public static void main(String[] args) {
 		List<Integer> result = filter(Arrays.asList(1,2,3,4,5,6),(Integer i) -> i % 2 == 0);
 		System.out.println(result);
@@ -34,5 +60,8 @@ class Test{
 		System.out.println(test);
 		Thread t = new Thread(()-> System.out.println("Hello world"));
 		t.start();
+		System.out.println(predicate(Arrays.asList(7,8,9,1,2,3,4,5,6),(Integer i) -> i%2==0 ));
+		System.out.println(map(Arrays.asList(7,8,9,1,2,3,4,5,6),(Integer integer) -> integer*2));
+		forEach(Arrays.asList(7,8,9,1,2,3,4,5,6),(Integer i)-> System.out.println(i));
 	}
 }
