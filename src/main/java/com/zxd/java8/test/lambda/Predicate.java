@@ -64,5 +64,12 @@ class Test{
 		System.out.println(predicate(Arrays.asList(7,8,9,1,2,3,4,5,6),(Integer i) -> i%2==0 ));
 		System.out.println(map(Arrays.asList(7,8,9,1,2,3,4,5,6),(Integer integer) -> integer*2));
 		forEach(Arrays.asList(7,8,9,1,2,3,4,5,6),(Integer i)-> System.out.println(i));
+
+		List<String> str = Arrays.asList("a","b","A","B");
+		str.sort((s1, s2) -> s1.compareToIgnoreCase(s2));
+		System.out.println(str);
+		str = Arrays.asList("a","b","c","A","B","C");
+		str.sort(String::compareToIgnoreCase);
+		System.out.println(str);
 	}
 }
