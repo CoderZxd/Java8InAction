@@ -58,7 +58,8 @@ class Test{
 		List<Integer> test = Arrays.asList(7,8,9,1,2,3,4,5,6);
 		test.sort((Integer o1,Integer o2) -> o1.compareTo(o2));
 		System.out.println(test);
-		Thread t = new Thread(()-> System.out.println("Hello world"));
+		String hello = "Hello world";
+		Thread t = new Thread(()-> System.out.println(hello));
 		t.start();
 		System.out.println(predicate(Arrays.asList(7,8,9,1,2,3,4,5,6),(Integer i) -> i%2==0 ));
 		System.out.println(map(Arrays.asList(7,8,9,1,2,3,4,5,6),(Integer integer) -> integer*2));
