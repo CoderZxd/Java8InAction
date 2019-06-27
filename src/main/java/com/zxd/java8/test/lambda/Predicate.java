@@ -1,5 +1,7 @@
 package com.zxd.java8.test.lambda;
 
+import com.sun.scenario.effect.impl.sw.sse.SSEBlend_SRC_OUTPeer;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -71,5 +73,10 @@ class Test{
 		str = Arrays.asList("a","b","c","A","B","C");
 		str.sort(String::compareToIgnoreCase);
 		System.out.println(str);
+
+		Function<Integer,Integer> f = x -> x + 1;
+		Function<Integer,Integer> g = x -> x * 2 ;
+		Function<Integer,Integer> h = f.andThen(g);
+		System.out.println(h.apply(1));
 	}
 }
