@@ -76,7 +76,9 @@ class Test{
 
 		Function<Integer,Integer> f = x -> x + 1;
 		Function<Integer,Integer> g = x -> x * 2 ;
-		Function<Integer,Integer> h = f.andThen(g);
-		System.out.println(h.apply(1));
+		Function<Integer,Integer> andThen = f.andThen(g);
+		Function<Integer,Integer> compose = f.compose(g);
+		System.out.println(andThen.apply(1));
+		System.out.println(compose.apply(1));
 	}
 }
