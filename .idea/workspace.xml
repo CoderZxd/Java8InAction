@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cf460347-b60e-4e8f-b8fe-f484867e0533" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/zxd/java8/test/lambda/Distinct.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java8InAction.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/zxd/java8/test/lambda/Distinct.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zxd/java8/test/lambda/Distinct.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -83,7 +81,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/com/zxd/java8/test/lambda/Distinct.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="144">
-              <caret line="8" column="87" selection-start-line="8" selection-start-column="87" selection-end-line="8" selection-end-column="87" />
+              <caret line="8" column="53" selection-start-line="8" selection-start-column="53" selection-end-line="8" selection-end-column="53" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -346,12 +344,12 @@
       <updated>1561358073715</updated>
       <workItem from="1561358294000" duration="18762000" />
       <workItem from="1561621348806" duration="4033000" />
-      <workItem from="1561788113149" duration="864000" />
+      <workItem from="1561788113149" duration="1733000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="23659000" />
+    <option name="totallyTimeSpent" value="24528000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1066" extended-state="6" />
@@ -499,7 +497,7 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/com/zxd/java8/test/lambda/Distinct.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="144">
-          <caret line="8" column="87" selection-start-line="8" selection-start-column="87" selection-end-line="8" selection-end-column="87" />
+          <caret line="8" column="53" selection-start-line="8" selection-start-column="53" selection-end-line="8" selection-end-column="53" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
