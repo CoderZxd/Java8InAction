@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cf460347-b60e-4e8f-b8fe-f484867e0533" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/zxd/java8/test/lambda/FileStreams.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/zxd/java8/test/lambda/StreamGenerateTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zxd/java8/test/lambda/Transaction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zxd/java8/test/lambda/Transaction.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -20,15 +19,6 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/zxd/java8/test/lambda/Letter.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="23" column="51" selection-start-line="23" selection-start-column="51" selection-end-line="23" selection-end-column="51" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/zxd/java8/test/lambda/Dish.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="537">
@@ -40,14 +30,23 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/zxd/java8/test/lambda/FileStreams.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="342">
-              <caret line="19" column="38" selection-start-line="19" selection-start-column="38" selection-end-line="19" selection-end-column="38" />
+            <state relative-caret-position="180">
+              <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/zxd/java8/test/lambda/StreamGenerateTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="180">
+              <caret line="10" column="74" selection-start-line="10" selection-start-column="74" selection-end-line="10" selection-end-column="74" />
             </state>
           </provider>
         </entry>
@@ -160,6 +159,7 @@
         <option value="$PROJECT_DIR$/src/main/java/com/zxd/java8/test/lambda/Trader.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/zxd/java8/test/lambda/Transaction.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/zxd/java8/test/lambda/FileStreams.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/zxd/java8/test/lambda/StreamGenerateTest.java" />
       </list>
     </option>
   </component>
@@ -337,7 +337,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.FileStreams">
+  <component name="RunManager" selected="Application.StreamGenerateTest">
     <configuration name="Dish" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.zxd.java8.test.lambda.Dish" />
       <module name="Java8InAction" />
@@ -377,8 +377,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Letter" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.zxd.java8.test.lambda.Letter" />
+    <configuration name="StreamGenerateTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.zxd.java8.test.lambda.StreamGenerateTest" />
       <module name="Java8InAction" />
       <extension name="coverage">
         <pattern>
@@ -405,11 +405,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.StreamGenerateTest" />
         <item itemvalue="Application.FileStreams" />
         <item itemvalue="Application.Transaction" />
         <item itemvalue="Application.Distinct" />
         <item itemvalue="Application.Dish" />
-        <item itemvalue="Application.Letter" />
       </list>
     </recent_temporary>
   </component>
@@ -427,25 +427,25 @@
       <workItem from="1561621348806" duration="4033000" />
       <workItem from="1561788113149" duration="4936000" />
       <workItem from="1561865936242" duration="559000" />
-      <workItem from="1561871781255" duration="7803000" />
+      <workItem from="1561871781255" duration="8833000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="36093000" />
+    <option name="totallyTimeSpent" value="37123000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1066" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.20628998" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.20628998" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Favorites" order="3" side_tool="true" />
       <window_info id="UI Designer" order="4" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.32832617" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32832617" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -642,11 +642,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/zxd/java8/test/lambda/FileStreams.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="19" column="38" selection-start-line="19" selection-start-column="38" selection-end-line="19" selection-end-column="38" />
+        <state relative-caret-position="180">
+          <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/zxd/java8/test/lambda/StreamGenerateTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="10" column="74" selection-start-line="10" selection-start-column="74" selection-end-line="10" selection-end-column="74" />
         </state>
       </provider>
     </entry>
