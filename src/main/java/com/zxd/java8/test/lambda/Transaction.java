@@ -1,10 +1,9 @@
 package com.zxd.java8.test.lambda;
 
-import java.util.Arrays;
-import java.util.Comparator;
-import java.util.List;
-import java.util.Optional;
+import java.util.*;
 import java.util.stream.Collectors;
+import java.util.stream.IntStream;
+import java.util.stream.Stream;
 
 public class Transaction {
     private final Trader trader;
@@ -80,5 +79,26 @@ public class Transaction {
             System.out.println(re);
         }
         System.out.println(re2);
+
+        OptionalInt maxInt = transactions.stream().mapToInt(Transaction::getValue).max();
+        int maxNum = maxInt.orElse(1);
+        System.out.println(maxNum);
+        IntStream intStream = IntStream.rangeClosed(1,100).filter(e->e%2==0);
+        System.out.println(intStream.count());
+
+        //勾股数
+        Stream<int[]> pythagoreanTriples = IntStream.rangeClosed(1,100).boxed().flatMap(
+                a -> IntStream.rangeClosed(a,100).filter(b -> Math.sqrt(a*a+b*b)%1 == 0).mapToObj(b -> new int[]{a,b,(int) Math.sqrt(a*a+b*b)})
+        );
+        pythagoreanTriples.forEach(e -> System.out.println(e[0]+" "+e[1]+" "+e[2]));
+        Stream<double[]> pythagoreanTriples2 = IntStream.rangeClosed(1,100).boxed().flatMap(
+                a -> IntStream.rangeClosed(a,100).mapToObj(b -> new double[]{a,b,Math.sqrt(a*a+b*b)}).filter(e->e[2]%1==0)
+        );
+        pythagoreanTriples2.forEach(e -> System.out.println(e[0]+" "+e[1]+" "+e[2]));
+        Stream<String> stream = Stream.of("Java 8 ", "Lambdas ", "In ", "Action");
+        stream.map(String::toUpperCase).forEach(System.out::println);
+        int[] numbers = {2, 3, 5, 7, 11, 13};
+        int sumNum = Arrays.stream(numbers).sum();
+        System.out.println(sumNum);
     }
 }
