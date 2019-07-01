@@ -1,9 +1,8 @@
 package com.zxd.java8.test.lambda;
 
-import java.util.Arrays;
-import java.util.List;
+import java.util.*;
 
-import static java.util.stream.Collectors.toList;
+import static java.util.stream.Collectors.*;
 
 /**
  * @Title: Dish
@@ -54,5 +53,27 @@ public class Dish {
 				new Dish("salmon", false, 450, Dish.Type.FISH) );
 		List<String> names = menu.stream().filter(dish -> dish.getCalories() > 300).map(Dish::getName).limit(3).collect(toList());
 		System.out.println(names);
+		Comparator<Dish> dishCaloriesComparator = Comparator.comparingInt(Dish::getCalories);
+		Optional<Dish> dish = menu.stream().collect(maxBy(dishCaloriesComparator));
+		if(dish.isPresent()){
+			System.out.println(dish.get());
+		}
+		int sum = menu.stream().collect(summingInt(Dish::getCalories));
+		System.out.println(sum);
+		int sum2 = menu.stream().map(Dish::getCalories).reduce(0,(a,b)->a+b);
+		System.out.println(sum2);
+		double avg = menu.stream().collect(averagingDouble(Dish::getCalories));
+		System.out.println(avg);
+		IntSummaryStatistics intSummaryStatistics = menu.stream().collect(summarizingInt(Dish::getCalories));
+		System.out.println(intSummaryStatistics);
+		System.out.println(intSummaryStatistics.getCount());
+		String namessss = menu.stream().map(Dish::getName).collect(joining(","));
+		System.out.println(namessss);
+//		String names2 = menu.stream().collect(joining());
+//		System.out.println(names2);
+		int total = menu.stream().collect(reducing(0,Dish::getCalories,(i,j)->i+j));
+		System.out.println(total);
+		int total2 = menu.stream().collect(reducing(0,Dish::getCalories,Integer::sum));
+		System.out.println(total2);
 	}
 }
