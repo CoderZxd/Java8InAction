@@ -5,6 +5,8 @@ import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 import java.util.stream.Stream;
 
+import static java.util.stream.Collectors.groupingBy;
+
 public class Transaction {
     private final Trader trader;
     private final int year;
@@ -42,6 +44,8 @@ public class Transaction {
                 new Transaction(mario, 2012, 700),
                 new Transaction(alan, 2012, 950)
         );
+        Map<Integer,List<Transaction>> remp = transactions.stream().collect(groupingBy(Transaction::getYear));
+        System.out.println(remp.size());
         //找出2011年发生的所有交易，并按交易额排序（从低到高）
         List<Transaction> result = transactions.stream().filter(e->e.getYear()==2011).sorted(Comparator.comparing(Transaction::getValue)).collect(Collectors.toList());
         System.out.println(result);
