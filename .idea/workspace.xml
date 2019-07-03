@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cf460347-b60e-4e8f-b8fe-f484867e0533" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/zxd/java8/test/lambda/Dish.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zxd/java8/test/lambda/Dish.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -21,8 +20,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/zxd/java8/test/lambda/Dish.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="375">
-              <caret line="91" column="50" selection-start-line="89" selection-start-column="20" selection-end-line="89" selection-end-column="30" />
+            <state relative-caret-position="501">
+              <caret line="105" column="32" selection-start-line="105" selection-start-column="32" selection-end-line="105" selection-end-column="32" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -418,12 +417,12 @@
       <workItem from="1561871781255" duration="9851000" />
       <workItem from="1561992272614" duration="3978000" />
       <workItem from="1562071512542" duration="598000" />
-      <workItem from="1562161122949" duration="2050000" />
+      <workItem from="1562161122949" duration="3819000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="44767000" />
+    <option name="totallyTimeSpent" value="46536000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1066" extended-state="6" />
@@ -570,8 +569,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/zxd/java8/test/lambda/Dish.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="91" column="50" selection-start-line="89" selection-start-column="20" selection-end-line="89" selection-end-column="30" />
+        <state relative-caret-position="501">
+          <caret line="105" column="32" selection-start-line="105" selection-start-column="32" selection-end-line="105" selection-end-column="32" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

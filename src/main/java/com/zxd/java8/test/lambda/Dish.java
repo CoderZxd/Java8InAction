@@ -95,6 +95,15 @@ public class Dish {
 			)
 		);
 		System.out.println(dishesByTypeCaloricLevel);
+
+		Map<Dish.Type,Long> types = menu.stream().collect(groupingBy(Dish::getType,counting()));
+		System.out.println(types);
+
+		Map<Dish.Type,Optional<Dish>> maxs = menu.stream().collect(groupingBy(Dish::getType,maxBy(Comparator.comparingInt(Dish::getCalories))));
+		System.out.println(maxs);
+
+		Map<Dish.Type,Dish> maxss = menu.stream().collect(groupingBy(Dish::getType,collectingAndThen(maxBy(Comparator.comparingInt(Dish::getCalories)),Optional::get)));
+		System.out.println(maxss);
 	}
 	public static enum CaloricLevel { DIET, NORMAL, FAT };
 }
