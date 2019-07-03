@@ -75,5 +75,26 @@ public class Dish {
 		System.out.println(total);
 		int total2 = menu.stream().collect(reducing(0,Dish::getCalories,Integer::sum));
 		System.out.println(total2);
+		Map<CaloricLevel,List<Dish>> dishesByCaloricLevel = menu.stream().collect(groupingBy(dish1 -> {
+			if(dish1.getCalories()<=400){
+				return CaloricLevel.DIET;
+			}else if(dish1.getCalories() <= 700){
+				return CaloricLevel.NORMAL;
+			}
+			return CaloricLevel.FAT;
+		}));
+		System.out.println(dishesByCaloricLevel);
+
+		Map<Dish.Type, Map<CaloricLevel, List<Dish>>> dishesByTypeCaloricLevel = menu.stream().collect(
+			groupingBy(Dish::getType,
+					groupingBy(dish2 -> {
+						if (dish2.getCalories() <= 400) return CaloricLevel.DIET;
+						else if (dish2.getCalories() <= 700) return CaloricLevel.NORMAL;
+						else return CaloricLevel.FAT;
+					} )
+			)
+		);
+		System.out.println(dishesByTypeCaloricLevel);
 	}
+	public static enum CaloricLevel { DIET, NORMAL, FAT };
 }
