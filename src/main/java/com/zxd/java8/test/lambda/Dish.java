@@ -1,6 +1,8 @@
 package com.zxd.java8.test.lambda;
 
 import java.util.*;
+import java.util.stream.Collectors;
+import java.util.stream.IntStream;
 
 import static java.util.stream.Collectors.*;
 
@@ -110,6 +112,23 @@ public class Dish {
 
 		Map<Dish.Type,Dish> maxss = menu.stream().collect(groupingBy(Dish::getType,collectingAndThen(maxBy(Comparator.comparingInt(Dish::getCalories)),Optional::get)));
 		System.out.println(maxss);
+
+		Map<Boolean,List<Dish>> patitions = menu.stream().collect(partitioningBy(Dish::isVegetarian));
+		System.out.println(patitions);
+		List<Dish> ver = menu.stream().filter(Dish::isVegetarian).collect(Collectors.toList());
+		System.out.println(ver);
+		System.out.println(partitionPrimes(10));
+		System.out.println(menu.stream().collect(Collectors.toList()));
 	}
 	public static enum CaloricLevel { DIET, NORMAL, FAT };
+
+	public static boolean isPrime(int candidate){
+		int candidateRoot = (int)Math.sqrt((double) candidate);
+		System.out.println(String.format("candidate:%d;candidateRoot:%d",candidate,candidateRoot));
+		return IntStream.rangeClosed(2,candidateRoot).noneMatch(i -> candidate % i == 0);
+	}
+
+	public static Map<Boolean,List<Integer>> partitionPrimes(int i){
+		return IntStream.rangeClosed(2,i).boxed().collect(partitioningBy(candicate -> isPrime(candicate)));
+	}
 }
