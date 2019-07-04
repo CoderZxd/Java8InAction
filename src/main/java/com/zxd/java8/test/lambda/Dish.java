@@ -88,9 +88,15 @@ public class Dish {
 		Map<Dish.Type, Map<CaloricLevel, List<Dish>>> dishesByTypeCaloricLevel = menu.stream().collect(
 			groupingBy(Dish::getType,
 					groupingBy(dish2 -> {
-						if (dish2.getCalories() <= 400) return CaloricLevel.DIET;
-						else if (dish2.getCalories() <= 700) return CaloricLevel.NORMAL;
-						else return CaloricLevel.FAT;
+						if(dish2.getCalories() <= 400){
+							return CaloricLevel.DIET;
+						}
+						else if(dish2.getCalories() <= 700){
+							return CaloricLevel.NORMAL;
+						}
+						else{
+							return CaloricLevel.FAT;
+						}
 					} )
 			)
 		);
