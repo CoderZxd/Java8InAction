@@ -112,18 +112,14 @@ public class Dish {
 
 		Map<Dish.Type,Dish> maxss = menu.stream().collect(groupingBy(Dish::getType,collectingAndThen(maxBy(Comparator.comparingInt(Dish::getCalories)),Optional::get)));
 		System.out.println(maxss);
-<<<<<<< HEAD
 		int processor = Runtime.getRuntime().availableProcessors();
 		System.out.println(processor);
-=======
-
 		Map<Boolean,List<Dish>> patitions = menu.stream().collect(partitioningBy(Dish::isVegetarian));
 		System.out.println(patitions);
 		List<Dish> ver = menu.stream().filter(Dish::isVegetarian).collect(Collectors.toList());
 		System.out.println(ver);
 		System.out.println(partitionPrimes(10));
 		System.out.println(menu.stream().collect(Collectors.toList()));
->>>>>>> 045c2a47bad11b4a14ea4485b463ef7f13743a3e
 	}
 	public static enum CaloricLevel { DIET, NORMAL, FAT };
 
