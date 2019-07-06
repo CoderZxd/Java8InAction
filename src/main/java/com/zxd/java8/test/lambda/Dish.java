@@ -104,6 +104,8 @@ public class Dish {
 
 		Map<Dish.Type,Dish> maxss = menu.stream().collect(groupingBy(Dish::getType,collectingAndThen(maxBy(Comparator.comparingInt(Dish::getCalories)),Optional::get)));
 		System.out.println(maxss);
+		int processor = Runtime.getRuntime().availableProcessors();
+		System.out.println(processor);
 	}
 	public static enum CaloricLevel { DIET, NORMAL, FAT };
 }
