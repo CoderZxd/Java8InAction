@@ -1,6 +1,8 @@
 package com.zxd.java8.test.lambda;
 
 import java.util.*;
+import java.util.stream.Collectors;
+import java.util.stream.IntStream;
 
 import static java.util.stream.Collectors.*;
 
@@ -88,9 +90,15 @@ public class Dish {
 		Map<Dish.Type, Map<CaloricLevel, List<Dish>>> dishesByTypeCaloricLevel = menu.stream().collect(
 			groupingBy(Dish::getType,
 					groupingBy(dish2 -> {
-						if (dish2.getCalories() <= 400) return CaloricLevel.DIET;
-						else if (dish2.getCalories() <= 700) return CaloricLevel.NORMAL;
-						else return CaloricLevel.FAT;
+						if(dish2.getCalories() <= 400){
+							return CaloricLevel.DIET;
+						}
+						else if(dish2.getCalories() <= 700){
+							return CaloricLevel.NORMAL;
+						}
+						else{
+							return CaloricLevel.FAT;
+						}
 					} )
 			)
 		);
@@ -104,8 +112,28 @@ public class Dish {
 
 		Map<Dish.Type,Dish> maxss = menu.stream().collect(groupingBy(Dish::getType,collectingAndThen(maxBy(Comparator.comparingInt(Dish::getCalories)),Optional::get)));
 		System.out.println(maxss);
+<<<<<<< HEAD
 		int processor = Runtime.getRuntime().availableProcessors();
 		System.out.println(processor);
+=======
+
+		Map<Boolean,List<Dish>> patitions = menu.stream().collect(partitioningBy(Dish::isVegetarian));
+		System.out.println(patitions);
+		List<Dish> ver = menu.stream().filter(Dish::isVegetarian).collect(Collectors.toList());
+		System.out.println(ver);
+		System.out.println(partitionPrimes(10));
+		System.out.println(menu.stream().collect(Collectors.toList()));
+>>>>>>> 045c2a47bad11b4a14ea4485b463ef7f13743a3e
 	}
 	public static enum CaloricLevel { DIET, NORMAL, FAT };
+
+	public static boolean isPrime(int candidate){
+		int candidateRoot = (int)Math.sqrt((double) candidate);
+		System.out.println(String.format("candidate:%d;candidateRoot:%d",candidate,candidateRoot));
+		return IntStream.rangeClosed(2,candidateRoot).noneMatch(i -> candidate % i == 0);
+	}
+
+	public static Map<Boolean,List<Integer>> partitionPrimes(int i){
+		return IntStream.rangeClosed(2,i).boxed().collect(partitioningBy(candicate -> isPrime(candicate)));
+	}
 }
