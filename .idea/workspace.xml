@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cf460347-b60e-4e8f-b8fe-f484867e0533" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/zxd/java8/test/lambda/ParallelStreams.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/zxd/java8/test/lambda/ForkJoinSumCalculator.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -18,11 +18,27 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/zxd/java8/test/lambda/FlowProformanceTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="375">
+            <state relative-caret-position="396">
               <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/zxd/java8/test/lambda/ForkJoinSumCalculator.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="375">
+              <caret line="54" lean-forward="true" selection-start-line="54" selection-end-line="54" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#338#339#0" expanded="true" />
+                <element signature="e#386#387#0" expanded="true" />
+                <element signature="e#1632#1633#0" expanded="true" />
+                <element signature="e#1668#1669#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -44,15 +60,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="900">
               <caret line="398" column="30" selection-start-line="398" selection-start-column="30" selection-end-line="398" selection-end-column="30" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/zxd/java8/test/lambda/StreamGenerateTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="234">
-              <caret line="13" selection-start-line="13" selection-end-line="13" />
             </state>
           </provider>
         </entry>
@@ -159,6 +166,7 @@
         <option value="$PROJECT_DIR$/src/main/java/com/zxd/java8/test/lambda/Dish.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/zxd/java8/test/lambda/ParallelStreams.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/zxd/java8/test/lambda/FlowProformanceTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/zxd/java8/test/lambda/ForkJoinSumCalculator.java" />
       </list>
     </option>
   </component>
@@ -341,7 +349,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.FlowProformanceTest">
+  <component name="RunManager" selected="Application.ForkJoinSumCalculator">
     <configuration name="Dish" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.zxd.java8.test.lambda.Dish" />
       <module name="Java8InAction" />
@@ -355,8 +363,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="FileStreams" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.zxd.java8.test.lambda.FileStreams" />
+    <configuration name="FlowProformanceTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.zxd.java8.test.lambda.FlowProformanceTest" />
       <module name="Java8InAction" />
       <extension name="coverage">
         <pattern>
@@ -368,8 +376,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="FlowProformanceTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.zxd.java8.test.lambda.FlowProformanceTest" />
+    <configuration name="ForkJoinSumCalculator" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.zxd.java8.test.lambda.ForkJoinSumCalculator" />
       <module name="Java8InAction" />
       <extension name="coverage">
         <pattern>
@@ -409,11 +417,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.ForkJoinSumCalculator" />
         <item itemvalue="Application.FlowProformanceTest" />
         <item itemvalue="Application.Dish" />
         <item itemvalue="Application.Transaction" />
         <item itemvalue="Application.StreamGenerateTest" />
-        <item itemvalue="Application.FileStreams" />
       </list>
     </recent_temporary>
   </component>
@@ -437,12 +445,12 @@
       <workItem from="1562161122949" duration="4243000" />
       <workItem from="1562249893997" duration="597000" />
       <workItem from="1562426581045" duration="79000" />
-      <workItem from="1562594414761" duration="1628000" />
+      <workItem from="1562594414761" duration="3047000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="49961000" />
+    <option name="totallyTimeSpent" value="51380000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1066" extended-state="6" />
@@ -706,8 +714,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/zxd/java8/test/lambda/FlowProformanceTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
+        <state relative-caret-position="396">
           <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/zxd/java8/test/lambda/ForkJoinSumCalculator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="54" lean-forward="true" selection-start-line="54" selection-end-line="54" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#338#339#0" expanded="true" />
+            <element signature="e#386#387#0" expanded="true" />
+            <element signature="e#1632#1633#0" expanded="true" />
+            <element signature="e#1668#1669#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
